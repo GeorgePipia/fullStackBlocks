@@ -12,36 +12,38 @@ myInstruments.unshift("kazu");
 // add new in  the last index
 myInstruments.push("ori");
 */ 
-// get the first index element (და თან ეს აგდებს ამ ელემენტს, როგორც ჩანს, რადგნა ქვედა ფუნქციამ მეორე ინდექსით დაწყო)
-const first = myInstruments.shift();
 
+function getFirstAndLastInstruments(instruments) {
+    const output = [];
+    output.push(myInstruments[0]);
+    output.push(myInstruments[myInstruments.length - 1]);
+    return output; 
+}
 
-console.log(first);
+console.log(getFirstAndLastInstruments());
 
-// II მეორენაირად 
+// Get the first 3 elements
 
-function getFirstInstrument(instruments) {
-    return myInstruments[0];
-  }; 
-console.log(getFirstInstrument());
+function getFirstThreeInstruments(instrum) {
+    const output = [];
+    output.push(myInstruments[0]);
+    output.push(myInstruments[1]);
+    output.push(myInstruments[2]);
+    return output;
+  
+  }
 
-// ბოლოს ელემენტის მიღება    
-//ამისთვის ვიყენებთ დამატებით ცვლადს, რადგან ინექსის ნომერი უნდა დააბრუნოს ამ ფუნქციამ და თუ პირდაპირ length - 1 არ გამოვა
+  console.log(getFirstThreeInstruments());
+// Better way with loop 
 
-function getLastInstrument(instruments) {
-    const index = myInstruments.length - 1;
-    return myInstruments[index];
+function getThree(instrum) {
+    const output = [];
+    for (let i = 0; i < 3; i++) {
+        //outputში დაამატე myინსტის ინდექსში მყოფი
+        output.push(myInstruments[i]);
+    }
 
-    // ან პირდაპირ  return instruments[instruments.length - 1];
-};
+    return output;
+}
 
- console.log(getLastInstrument());
-
- // removing the last element - ასევე მოგცემდა ერეის ბოლო ელემენტს.
-
-function getLastInstrument(instruments) {
-    
-    return myInstruments.pop();
-};
-
-console.log(getLastInstrument());
+console.log(getThree());
