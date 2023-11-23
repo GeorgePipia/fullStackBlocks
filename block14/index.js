@@ -26,12 +26,3 @@ function getT(inst) {
 }
 
 console.log(getT());
-
-
-    for ( let i = 0; i < myInstruments.length; i++ ) {
-        const instrum = myInstruments[i];
-        if (instrum.length > instrum.length) {
-                console.log(instrum);
-        }
-    }
-
