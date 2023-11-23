@@ -12,14 +12,34 @@ myInstruments.unshift("kazu");
 // add new in  the last index
 myInstruments.push("ori");
 */ 
+// get the first index element (და თან ეს აგდებს ამ ელემენტს, როგორც ჩანს, რადგნა ქვედა ფუნქციამ მეორე ინდექსით დაწყო)
+const first = myInstruments.shift();
 
-//add those strings
-myInstruments.push("tuba", "basson");
 
-// remove 1 element on index 2
-myInstruments.splice(2, 1);
+console.log(first);
 
-//add saxsaphone as index 1
-myInstruments.unshift("Saxaphone");
+// II მეორენაირად 
 
-console.log(myInstruments);
+function getFirstInstrument(instruments) {
+    return myInstruments[0];
+  }; 
+console.log(getFirstInstrument());
+
+// ბოლოს ელემენტის მიღება    
+//ამისთვის ვიყენებთ დამატებით ცვლადს, რადგან ინექსის ნომერი უნდა დააბრუნოს ამ ფუნქციამ და თუ პირდაპირ length - 1 არ გამოვა
+
+function getLastInstrument(instruments) {
+    const index = myInstruments.length - 1;
+    return myInstruments[index];
+};
+
+ console.log(getLastInstrument());
+
+ // removing the last element - ასევე მოგცემდა ერეის ბოლო ელემენტს.
+
+function getLastInstrument(instruments) {
+    
+    return myInstruments.pop();
+};
+
+console.log(getLastInstrument());
