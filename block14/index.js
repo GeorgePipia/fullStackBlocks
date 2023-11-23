@@ -13,14 +13,13 @@ myInstruments.unshift("kazu");
 myInstruments.push("ori");
 */ 
 
-// ამატებს პირველ ეელემნტად
-myInstruments.unshift("saxophone");
+//add those strings
+myInstruments.push("tuba", "basson");
 
-// დროებით აქრობს პირველ ორ ელემენტს:  saxa, flute
-const firstTwo = myInstruments.slice(2);
+// remove 1 element on index 2
+myInstruments.splice(2, 1);
 
-// პრინტავს მხოლოდ ინდექს : 3 და 5 ის ელემენტებს.
-const lastTwo = myInstruments.slice(3, 5);
-console.log(lastTwo);
+//add saxsaphone as index 1
+myInstruments.unshift("Saxaphone");
 
 console.log(myInstruments);
