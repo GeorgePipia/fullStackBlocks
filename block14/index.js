@@ -31,6 +31,8 @@ console.log(getFirstInstrument());
 function getLastInstrument(instruments) {
     const index = myInstruments.length - 1;
     return myInstruments[index];
+
+    // ან პირდაპირ  return instruments[instruments.length - 1];
 };
 
  console.log(getLastInstrument());
