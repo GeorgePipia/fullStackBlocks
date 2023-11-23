@@ -13,37 +13,25 @@ myInstruments.unshift("kazu");
 myInstruments.push("ori");
 */ 
 
-function getFirstAndLastInstruments(instruments) {
-    const output = [];
-    output.push(myInstruments[0]);
-    output.push(myInstruments[myInstruments.length - 1]);
-    return output; 
+function getT(inst) {
+    out = []; // შექმენი დამატებითი ერრეი რომელშიც ამ ელემენტებს ჩააწყობ
+    for (let i = 0; i < myInstruments.length; i++) { //ყველა ელემენტს დაუვლის
+        const instumenti = myInstruments[i];  //გვჭირდება, რომ ელემენტში, პირველ ინდექსი შეამოწმოს, ამიტომ ქმნი 
+                                         // დამატებით ცვლადს - გასათითეობლად, რომელშიც ერეის ელემენტები შევლენ სათითაოდ
+        if( instumenti[0] === "t") {    //თითოეული ელემნტისთვის, 0 ინდექსს შეადრებს სტრინგ tს
+            out.push(myInstruments[i]);  //out ში შეიყვანს, მაიინსტურმენტის შესაბმის ელემენტს
+        }
+    }
+    return out;    // დაბრუნება შესული ელემენტების.
 }
 
-console.log(getFirstAndLastInstruments());
+console.log(getT());
 
-// Get the first 3 elements
 
-function getFirstThreeInstruments(instrum) {
-    const output = [];
-    output.push(myInstruments[0]);
-    output.push(myInstruments[1]);
-    output.push(myInstruments[2]);
-    return output;
-  
-  }
-
-  console.log(getFirstThreeInstruments());
-// Better way with loop 
-
-function getThree(instrum) {
-    const output = [];
-    for (let i = 0; i < 3; i++) {
-        //outputში დაამატე myინსტის ინდექსში მყოფი
-        output.push(myInstruments[i]);
+    for ( let i = 0; i < myInstruments.length; i++ ) {
+        const instrum = myInstruments[i];
+        if (instrum.length > instrum.length) {
+                console.log(instrum);
+        }
     }
 
-    return output;
-}
-
-console.log(getThree());
