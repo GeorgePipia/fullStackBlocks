@@ -1,5 +1,3 @@
-// === DO NOT EDIT THIS REGION ===
-// Read the comments to understand how the program is structured.
 
 // Prompt the user for a list of integers separated by commas.
 const userInputString = prompt(
@@ -29,8 +27,6 @@ const userInputString = prompt(
   console.log(`The even numbers you gave are ${getEvens(numbers)}.`);
   console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
   
-  // === EDIT THE CODE BELOW ===
-  // Complete the functions below to make the program work!
   
   /**
    * @param {number[]} numbers an array of integers
@@ -47,15 +43,24 @@ const userInputString = prompt(
    * @returns {number} the sum of the numbers
    */
   function getSum(numbers) {
-    // TODO
+     let sum = 0;
+     for(let i = 0; i < numbers.length; i++) {
+          sum += numbers[i];
+     }
+     return sum;
   }
   
   /**
    * @param {number[]} numbers an array of integers
    * @returns {number} the mean of the numbers
    */
+         //საშუალო
   function getMean(numbers) {
-    // TODO
+        mean = 0;
+        for(let i=0; i < numbers.length; i++) {
+              mean += numbers[i];   // თუ აქვე დაწერ სრულ გამოსახულებას, ყოველ ჯერზე აღსრულდება. ამიტომ არ იქნება სწორი.
+        }
+        return mean / numbers.length;
   }
   
   /**
@@ -63,7 +68,7 @@ const userInputString = prompt(
    * @returns {number} the smallest of the numbers
    */
   function getMin(numbers) {
-    // TODO
+           return Math.min(...numbers); // three dots refers to (spread - პროცედურა, რათა აღიქვას, როგორც რიცხვი) array : ) 
   }
   
   /**
@@ -71,15 +76,17 @@ const userInputString = prompt(
    * @returns {number} the largest of the numbers
    */
   function getMax(numbers) {
-    // TODO
+       
+       return Math.max(...numbers);
   }
   
   /**
    * @param {number[]} numbers an array of integers
    * @returns {number} the range of the numbers (max - min)
    */
+          // მაქსიმალურს - მინიმალური
   function getRange(numbers) {
-    // TODO
+        return Math.max(...numbers) - Math.min(...numbers);
   }
   
   /**
