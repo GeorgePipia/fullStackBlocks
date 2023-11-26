@@ -86,15 +86,35 @@ const userInputString = prompt(
    */
           // მაქსიმალურს - მინიმალური
   function getRange(numbers) {
-        return Math.max(...numbers) - Math.min(...numbers);
-  }
+       // return Math.max(...numbers) - Math.min(...numbers);
+       let min = numbers[0];    //ქმნი ახალ ცვლადს, რომელთანაც აკავშირებ ახალ ერეის
+       let max = numbers[0];
+
+       for (let i = 1; i < numbers.length; i++) { //იწყებ 1ით, რადგან ყოველი ელემენტი უნდა შეადარო წინა ელემენტს. 0 - 
+        if( numbers[i] < min) { 
+          min = numbers[i];
+        }
+        if( numbers[i] > max ) {
+            max = numbers[i];
+       }
+     }
+     return max - min;
+}
   
   /**
    * @param {number[]} numbers an array of integers
    * @returns {number[]} the even numbers in the array
    */
+
   function getEvens(numbers) {
-    // TODO
+  
+    let evens = [];
+    for(let i = 0; i < numbers.length; i++) {
+      if(numbers[i] % 2 === 0) { //თუ გაყოფისას ნაშთი არის 0
+        evens.push(numbers[i]);
+      }
+    }
+      return evens;
   }
   
   /**
@@ -102,5 +122,12 @@ const userInputString = prompt(
    * @returns {number[]} the odd numbers in the array
    */
   function getOdds(numbers) {
-    // TODO
-  }
+    let odds = [];
+
+    for( let i = 0; i < numbers.length; i++) {
+      if(numbers[i] % 2 !== 0) {
+        odds.push(numbers[i]);
+      }
+    }
+    return odds;
+  };
