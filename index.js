@@ -17,3 +17,4 @@ console.log(Object.keys(dinner));
 console.log(Object.values(dinner));
 
 console.table(Object.values(dinner));
+
