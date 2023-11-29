@@ -18,3 +18,9 @@ console.log(Object.values(dinner));
 
 console.table(Object.values(dinner));
 
+let total  =0;
+
+for(const indme in dinner) {
+    total += dinner[indme];
+}
+console.log(total);
